@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width:1270px)" href="/project1/phone.css">
+    <title>restaurant near you | www.indianfoodpoint.com</title>
+<style>
+
+.top{
+display: flex;
+justify-content: center;
+background-color:grey;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#logo img{  
+height:70px; 
+width:80px;
+margin:20px;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+}
+
+#navbar{
+position: sticky;
+display: flex;
+margin: 2px;
+padding: 2px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbarlist{
+position: sticky;
+display:flex;
+justify-content:center;
+align-items:center;
+list-style: none;
+}
+
+#navbar ul li a{
+position: sticky;
+color:black;
+display: block;
+padding: 2px 10px;
+margin: 2px 10px;
+border-radius: 20px;
+text-decoration: none;
+border: 1px solid black;
+}
+
+#navbar ul li a:hover{
+background-color: white;
+border-radius: 20px;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+text-decoration: none;
+}
+
+#navbar::before{
+content: "";
+border-radius: 20px;
+background-color: wheat;
+z-index: -1;
+opacity: 0.89;
+}
+
+.content{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+height:400px;
+padding: 12px;
+}
+
+.contentheading{
+text-align: center;
+font-size: 1.8rem;
+}
+
+
+.top::before{
+content: "";
+position:absolute;
+background: url('https://cdn.pixabay.com/photo/2015/05/04/10/16/vegetables-752153_1280.jpg')no-repeat center center/cover;
+height:95%;
+width:100%;
+z-index: -1;
+opacity: 0.6;
+}
+
+.btn{
+background-color: grey;
+font-size: 1.3rem;
+cursor:pointer;
+border:2px solid white;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+width: 120px;
+height:40px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn:hover{
+border: 2px solid black;
+background-color: white;
+box-shadow: 10px 10px 10px black;
+
+}
+
+.hr1::before{
+content: "";
+position:absolute;
+background: url('https://cdn.pixabay.com/photo/2015/09/13/21/15/room-938750_1280.jpg')no-repeat center center/cover;
+height:85%;
+width:100%;
+z-index: -1;
+opacity: 0.89;
+}
+
+.service{
+display: block;
+width:186px;
+margin: auto;
+border: 5px solid black;
+border-top-left-radius: 55px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 55px;
+}
+
+.service h1{
+    margin: 4px;
+}
+
+.boxes{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.boxes img{
+height:200px;
+width: 200px;
+margin: 20px;
+border-radius: 20px;
+}
+
+.boxesin{
+display: flex;
+flex-direction: column;
+border: 4px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+margin:25px;
+align-items: center;
+justify-content: center;
+width: 380px;
+height: 395px;
+}
+
+.insidebox{
+display: block;
+width:300px;
+margin: auto;
+}
+
+.hr2::before{
+content: "";
+position:absolute;
+background: url('../bg2.jpg')no-repeat center center/cover;
+height:117%;
+width:100%;
+z-index: -1;
+opacity: 0.89;
+}
+
+.mark{
+display: block;
+width:248px;
+margin: auto;
+border: 4px solid black;
+border-top-left-radius: 55px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 55px;
+}
+
+.mark h1{
+margin: 6px;
+padding: 1px;
+}
+
+.special{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.specialoffer1{
+width: 300px;
+border: 4px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+padding: 20px;
+margin: 60px;
+}
+
+.special img{
+width:250px;
+height:250px;
+border-radius: 18px;
+margin: 20px;
+}
+
+.specialbtn{
+background-color: grey;
+font-size: 1.3rem;
+cursor:pointer;
+border:2px solid white;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+display: block;
+width:260px;
+height: 40px;
+margin: 20px;
+}
+
+.specialbtn:hover{
+border: 2px solid black;
+background-color: white;
+box-shadow: 10px 10px 10px black;
+}
+
+.veg{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+display: block;
+width:240px;
+margin: 20px;
+}
+
+#form{
+border: 4px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 240px;
+margin: auto;
+}
+
+#form:hover{
+box-shadow:10px 10px 10px black;
+}
+
+#form input{
+width: 120px;
+border: 1px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+}
+
+#form label{
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.formin{
+border: 1px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+text-align:center;
+width:168px;
+margin: 4px;
+padding:8px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hr5::before{
+content: "";
+position:absolute;
+background: url('../bg3.jpg')no-repeat center center/cover;
+height:80%;
+width:100%;
+z-index: -1;
+opacity: 0.89;
+}
+
+.client{
+border: 4px solid black;
+border-top-left-radius: 60px;
+border-top-right-radius: 20px;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 60px;
+display: block;
+width: 140px;
+margin: auto;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.hr3::before{
+content:" ";
+position: absolute;
+background: url(https://cdn.pixabay.com/photo/2017/02/27/13/56/room-2103284_640.jpg) no-repeat center center/cover;
+width: 100%;
+height: 289px;
+z-index: -1;
+opacity: 0.89;
+}
+
+.client h2{
+margin: 8px;
+}
+
+.clients{
+display: flex;
+justify-content: center;
+}
+
+.clientimg{
+height:180px;
+width: 200px;
+margin: 20px;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.clientimg:hover{
+box-shadow: 10px 10px 10px black;
+}
+
+.hr4::before{
+content: "";
+position: absolute;
+background: url(/box4.jpg) no-repeat center center/cover;
+width:100%;
+height: 125px;
+z-index: -1;
+opacity: 0.6;
+}
+
+.foot{
+display: flex;
+justify-content:space-between;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.boxreview{
+display: flex;
+flex-direction: column;
+border: 3px solid black;
+}
+
+.boxreview:hover{
+box-shadow: 10px 10px 10px black;
+}
+
+.submitbtn:hover{
+cursor: pointer;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+textarea{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+</style>
+</head>
+<body>
+<h1 class="top">iFoodie</h1>
+<nav id="navbar">
+<div id="logo">
+    <img src="https://cdn.pixabay.com/photo/2017/04/04/01/08/fruits-2200001_640.jpg" alt="noimage">
+</div>
+<ul class="navbarlist">
+    <li class="list"><a href="#navbar">Home</a></li>
+    <li class="list"><a href="#services">Our Services</a></li>
+    <li class="list"><a href="#taste">Make your taste</a></li>
+    <li class="list"><a href="#form">Form</a></li>
+    <li class="list"><a href="#ourclient">Our Clients</a></li>
+    <li class="list"><a href="#review">Drop a review</a></li>
+</ul>  
+</nav>  
+<section class="content">
+    <h1 class="contentheading">Welcome to iFoodie</h1>
+    <p class="contentpara">Having the best equipment and decor won't matter if your restaurant is unable to prepare and serve good food.</p>
+    <p> A good restaurant knows how to purchase, prepare, and preserve food to make sure its customers are being served the best quality dishes.</p>
+<button class="btn" >Order now</button>
+</section>
+<hr class="hr1">
+<div id="services" class="service"><h1 >Our Services</h1></div>
+<section class="boxes">
+    <div id="box1" class="boxesin">
+        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg" alt="no image">
+        <h2 class="boxheading">Delicious Pizza</h2>
+        <p class="insidebox">Pizza, arguably one of the most popular foods in the world, has become a mainstay at many restaurants and even homes. It is a delicious delight which is hard to resist. </p>
+    </div>
+    <div id="box2" class="boxesin"> 
+        <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg" alt="no image">
+        <h2 class="boxheading">Delicious Burger</h2>
+        <p class="insidebox">The best burgers offer a combination of tastes and textures – sweet, sour, salt – with a bit of crunch. The patty needs to be juicy, the bun soft but sturdy, and you want the meat/bun.</p></div>
+    <div id="box3" class="boxesin"> 
+        <img src="https://cdn.pixabay.com/photo/2017/08/19/13/40/car-2658612_640.jpg" alt="no image">
+        <h2 class="boxheading">Food Ordering</h2>
+        <p class="insidebox">An online food ordering system allows your business to accept and manage orders placed online for delivery or takeaway. Customers browse a digital menu.</p></div>
+</section> 
+<br>
+<hr class="hr2">
+<div id="taste" class="mark"><h1>Mark your Taste</h1></div>
+<section class="special">
+<div class="specialoffer1">
+    <img src="/veg.jpg" alt="no image">
+    <button class="specialbtn">Order Veg Food here</button>
+    <p class="veg">less saturated fat and cholesterol and more vitamins C and E, dietary fiber, folic acid, potassium, magnesium, and phytochemicals (plant chemicals), such as carotenoids and flavonoids.</p>
+</div>
+<div class="specialoffer1">
+    <img src="/nonveg.jpg" alt="no image">
+    <button class="specialbtn">Order Non-Veg Food here</button>
+    <p class="veg">Non-veg foods are high in protein content which is an essential element for smooth functioning and healing of the body. The animal proteins contain all the amino acids, ensuring complete nourishment.</p>
+</div>
+<div class="specialoffer1">
+    <img src="/box4.jpg" alt="no image">
+    <button class="specialbtn">Order Drinks here</button>
+    <p class="veg">A moderate amount of beer has various health benefits because of its nutritional value. It has protein, fiber, vitamins, and minerals that are good for heart, bone health, diabetes, and kidney and brain functions</div>
+</section>
+<hr class="hr5">
+<section>
+    <form action="" id="form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" class="formin"></input>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your E-mail" class="formin">
+        <label for="mobile">Mobile number:</label>
+        <input type="number" name="mobile" id="number" placeholder="Enter your mobile number" class="formin"></input>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address" placeholder="Enter your address" class="formin"></input>
+        <label for="description">Tell about us:</label>
+        <textarea name="description" id="description" cols="20" rows="10" class="formin"></textarea>
+        <button type="submit" class="formin">Submit Here</button>
+    </form>
+</section> 
+<br><hr class="hr3">
+<div class="client"><h2>Our Clients</h2></div>
+<section id="ourclient" class="clients">
+  <a href="https://en.wikipedia.org/wiki/GMA_Network_(company)" target="_blank">  <img src="/client1.png" alt="client not avaliable" class="clientimg"></a>
+  <a href="https://en.wikipedia.org/wiki/Tera_Computer_Company" target="_blank">  <img src="/client2.jpg" alt="client not avaliable" class="clientimg"></a>
+  <a href="https://en.wikipedia.org/wiki/Microsoft" target="_blank">  <img src="/client3.jpg" alt="client not avaliable" class="clientimg"></a>
+  <a href="https://en.wikipedia.org/wiki/Skype" target="_blank">  <img src="/client4.png" alt="client not avaliable" class="clientimg"></a>
+  <a href="https://en.wikipedia.org/wiki/Apple" target="_blank">  <img src="/client5.png" alt="client not avaliable" class="clientimg"></a>
+</section>
+<hr class="hr4">
+<footer class="foot">
+    <div class="descibe">
+        <div>All rights reserved &copy;</div>
+        <div>Developed by Akash</div>
+        <div>Contact:-9671372310</div>
+        <div>E-mail:-akashduhan001@gmail.com</div> 
+        <div>Address:-S.C.O-235(A),Mukherjee Nagar,New Delhi</div>
+    </div>
+<div class="boxreview">
+    <textarea name="review" id="review" cols="30" rows="4" placeholder="drop your review Here"></textarea>
+    <button class="submitbtn" type="submit" >Submit your review</button>
+</div>
+</footer>
+</body>
+</html>
